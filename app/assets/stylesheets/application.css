@@ -13,3 +13,74 @@
  *= require_tree .
  *= require_self
  */
+
+/* Reset some defaults */
+body {
+	font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+	margin: 2rem;
+	background: #f8f9fa;
+	color: #333;
+}
+
+/* Headings */
+h1,
+h2 {
+	color: #222;
+	margin-bottom: 1rem;
+}
+
+/* Form */
+form {
+	margin: 1.5rem 0;
+}
+
+input[type='text'] {
+	padding: 0.5rem;
+	font-size: 1rem;
+	width: 300px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+input[type='submit'] {
+	background: #007bff;
+	color: #fff;
+	border: none;
+	padding: 0.5rem 1rem;
+	margin-left: 0.5rem;
+	font-size: 1rem;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type='submit']:hover {
+	background: #0056b3;
+}
+
+/* Alerts */
+p[style*='color:red'] {
+	background: #ffe6e6;
+	border: 1px solid #ff4d4d;
+	padding: 0.5rem;
+	border-radius: 4px;
+}
+
+/* Lists */
+ul {
+	padding-left: 1.2rem;
+	margin-bottom: 1.5rem;
+}
+
+li {
+	margin: 0.3rem 0;
+}
+
+/* Container */
+.container {
+  margin: 0 auto;
+	background: #fff;
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	max-width: 500px;
+}

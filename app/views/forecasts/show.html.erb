@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Forecast</h1>
+
+  <p><strong>City:</strong> <%= @city %></p>
+  <p><strong>Source:</strong> <%= @from_cache ? "Cache (≤30m)" : "Live API" %></p>
+
+  <h2>Current</h2>
+  <ul>
+    <li>Temp: <%= (@current[:temp] || "N/A") %>°C</li>
+    <li>Conditions: <%= (@current[:description] || "N/A") %></li>
+  </ul>
+
+  <h2>Next Days</h2>
+  <% if @daily.present? %>
+    <ul>
+      <% @daily.each do |d| %>
+        <li><%= d[:date] %> — High <%= d[:high] || "N/A" %>°, Low <%= d[:low] || "N/A" %>° — <%= d[:description] || "N/A" %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>No forecast available.</p>
+  <% end %>
+
+  <%= link_to "Search again", root_path, class: "btn" %>
+</div>

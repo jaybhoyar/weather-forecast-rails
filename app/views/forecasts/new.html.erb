@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Weather Lookup</h1>
+
+  <%= form_with url: forecast_path, method: :post, local: true do %>
+    <%= text_field_tag :city, params[:city], placeholder: "Enter city (e.g., Mumbai)" %>
+    <%= submit_tag "Get Forecast" %>
+  <% end %>
+
+  <% if flash[:alert] %>
+    <p style="color:red"><%= flash[:alert] %></p>
+  <% end %>
+</div>
